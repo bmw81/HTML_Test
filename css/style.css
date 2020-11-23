@@ -1,0 +1,409 @@
+@font-face {
+    font-family: Gotham Pro;
+    src: url(../fonts/gotham_pro_bold.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/montserrat.ttf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../fonts/montserrat_bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-Medium;
+    src: url(../fonts/montserrat_medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #e5e5e5;
+}
+.container {
+    width: 1170px;
+    margin: 15px auto;
+    border: 1px solid red;
+}
+.firms__title  {
+    margin-bottom: 23px;
+    font-family: Gotham Pro;
+    font-size: 20px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #000000;
+}
+.firm-card {
+    width: 100%;
+    min-height: 71px;
+    padding-left: 38px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 5px;
+}
+.firm-card + .firm-card {
+    margin-top: 16px;
+}
+.firm-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firm-card__num {
+    margin-right: 38px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #3E3B4A;
+}
+.firm-card__logo--01 {
+    margin-right: 25px;
+}
+.firm-card__logo--02 {
+    margin-right: 33px;
+}
+.firm-card__name {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #33312C;
+}
+.firm-card__name--01 {
+    margin-right: 55px;
+}
+.firm-card__name--02 {
+    margin-right: 49px;
+}
+.firm-card__name--03 {
+    margin-right: 29px;
+}
+.firm-card__name--04 {
+    margin-right: 34px;
+}
+.stars {
+    margin-right: 63px;
+}
+.stars img + img {
+    margin-left: 7px;
+}
+.gift {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #33312C;
+}
+.gift::before {
+    display: inline-block;
+    margin-right: 14px;
+    width: 19px;
+    height: 19px;
+    content: '';
+    background: url(../img/gift.png);
+}
+.firm-card__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.firm-card__btn {
+    height: 35px;
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.firm-card__btn--1 {
+    width: 130px;
+}
+.firm-card__btn--2 {
+    width: 87px;
+}
+.firm-card__btn--3 {
+    width: 107px;
+    background: #E2455A;
+    color: #fff;
+}
+.firm-card__btn--3:hover {
+    background: #e27283;
+}
+.firm-card__btn--1, .firm-card__btn--2 {
+    border: 1px solid #dadada;
+    color: #191925;
+}
+.firm-card__btn--1:hover, .firm-card__btn--2:hover {
+    background: #dddcdc;
+}
+.firm-card__btn + .firm-card__btn {
+    margin-left: 23px;
+}
+.btn-show-more {
+    display: block;
+    margin: 23px auto 88px;
+    width: 178px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../img/show-more-border.png);
+    font-family: Gotham Pro;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #191925;
+    cursor: pointer;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 599px) {
+    .container {
+        width: 100%;
+    }
+    .firms__title {
+        text-align: center;
+    }
+    .firm-card {
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .firm-card__num {
+        display: none;
+    }
+    .firm-card__name {
+        display: none;
+    }
+    .firm-card__btns {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    .btn-show-more {
+        margin-bottom: 30px;
+    }
+}
+/* Адаптив для смартфонов */
+@media (max-width: 465px) {
+    .container {
+        width: 350px;
+    }
+    .firm-card__info {
+        flex-direction: column;
+    }
+    .firm-card__logo--01, .firm-card__logo--02, .stars {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* news */
+.news__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.news__title {
+    font-family: Gotham Pro;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    color: #000000;
+}
+nav {
+    display: flex;
+}
+nav a {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #c3c1db;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #7A798A;
+}
+nav a:first-child {
+    color: #5A3EC4;
+}
+nav a + a {
+    margin-left: 13px;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 599px) {
+    .news__header {
+        flex-direction: column;
+    }
+    .news__title {
+        margin-bottom: 15px;
+    }
+}
+/* Адаптив для смартфонов */
+@media (max-width: 465px) {
+    .news__title {
+        text-align: center;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        text-align: center;
+    }
+    nav a + a {
+        margin: 0;
+    }
+}
+/* news body */
+.news__body {
+    display: flex;
+    margin-bottom: 23px;
+}
+.news__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.news__card {
+    width: 380px;
+    height: 225px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #fff;
+    box-shadow: 0px 12px 39px rgba(0, 0, 0, 0.07);
+    border-radius: 7px;
+    margin-bottom: 16px;
+}
+.news__card--title {
+    padding-left: 22px;
+    font-family: Montserrat-Medium;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 2.18;
+    color: #5A3EC4;
+}
+.news__card--text {
+    padding-left: 22px;
+    margin-bottom: 16px;
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #000000;
+}
+.player {
+    padding-left: 22px;
+    padding-right: 19px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6.5px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #F5F5F6;
+}
+.player__name {
+    display: block;
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #C1C0CD;
+}
+.player__name::before {
+    display: inline-block;
+    content: '';
+    margin-right: 10px;
+    width: 38px;
+    height: 38px;
+    background-image: url(../img/kaper.png);
+    vertical-align: middle;
+}
+.player__score {
+    display: flex;
+    flex-direction: column;
+}
+.player__score--num {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    text-align: right;
+    color: #403E51;
+}
+.player__score--name {
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 2.18;
+    text-align: center;
+    color: #C1C0CD;
+}
+.match {
+    padding-left: 13px;
+    padding-right: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+.team {
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #403E51;
+}
+.team-1::before {
+    display: inline-block;
+    content: '';
+    margin-right: 9px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/shahter.png);
+    vertical-align: middle;
+}
+.team-2::after {
+    display: inline-block;
+    content: '';
+    margin-left: 9px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../img/dinamo.png);
+    vertical-align: middle;
+}
+.match__data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.match__data span:first-child {
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 2;
+    text-align: center;
+    color: #C1C0CD;
+}
+.match__data span:last-child {
+    font-family: Montserrat-Medium;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 0.5;
+    text-align: center;
+    color: #403E51;
+}
+.contest {
+    display: block;
+    margin-left: 14px;
+}
